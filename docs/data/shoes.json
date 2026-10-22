@@ -1,0 +1,273 @@
+[
+  {
+    "id": "shoe-1",
+    "name": "Shoe 1",
+    "price": 2000,
+    "category": "Running",
+    "images": ["p1.png"],
+    "sizes": [
+      "US M 6 / W 7.5",
+      "US M 6.5 / W 8",
+      "US M 7 / W 8.5",
+      "US M 7.5 / W 9",
+      "US M 8 / W 9.5",
+      "US M 8.5 / W 10",
+      "US M 9 / W 10.5",
+      "US M 9.5 / W 11",
+      "US M 10 / W 11.5",
+      "US M 10.5 / W 12",
+      "US M 11 / W 12.5",
+      "US M 11.5 / W 13",
+      "US M 12 / W 13.5",
+      "US M 12.5 / W 14",
+      "US M 13 / W 14.5"
+    ],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["₱2,000–₱5,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": [],
+      "shoeHeight": ["Low"],
+      "sport": []
+    }
+  },
+  {
+    "id": "shoe-2",
+    "name": "Nike Airforce",
+    "price": 2000,
+    "category": "Men's Shoes",
+    "images": ["airforce_nike.png", "airforce_nike2.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["₱2,000–₱5,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["White"],
+      "shoeHeight": ["Low"],
+      "sport": ["Sneakers"]
+    }
+  },
+  {
+    "id": "shoe-3",
+    "name": "Shoe 3",
+    "price": 1800,
+    "category": "Men Performance",
+    "images": ["p3.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 10.5 / W 12", "US M 11 / W 12.5", "US M 11.5 / W 13", "US M 12 / W 13.5", "US M 12.5 / W 14", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Women"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": [],
+      "shoeHeight": ["Low"],
+      "sport": ["Basketball"]
+    }
+  },
+  {
+    "id": "shoe-4",
+    "name": "Shoe 4",
+    "price": 1600,
+    "category": "Men Performance",
+    "images": ["p4.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 10.5 / W 12", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["White", "Blue"],
+      "shoeHeight": ["Mid"],
+      "sport": ["Basketball"]
+    }
+  },
+  {
+    "id": "shoe-5",
+    "name": "Shoe 5",
+    "price": 1500,
+    "category": "Men Performance",
+    "images": ["p5.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["White", "Red"],
+      "shoeHeight": ["Low"],
+      "sport": ["Running"]
+    }
+  },
+  {
+    "id": "shoe-6",
+    "name": "Shoe 6",
+    "price": 1700,
+    "category": "Men Performance",
+    "images": ["p6.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["Black"],
+      "shoeHeight": ["High"],
+      "sport": ["Running"]
+    }
+  },
+  {
+    "id": "shoe-7",
+    "name": "Shoe 7",
+    "price": 1900,
+    "category": "Men Performance",
+    "images": ["p7.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": [],
+      "shoeHeight": ["Low"],
+      "sport": ["Basketball"]
+    }
+  },
+  {
+    "id": "shoe-8",
+    "name": "Shoe 8",
+    "price": 2100,
+    "category": "Men Performance",
+    "images": ["p8.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["₱2,000–₱5,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["White", "Red"],
+      "shoeHeight": ["Mid"],
+      "sport": ["Basketball"]
+    }
+  },
+  {
+    "id": "shoe-9",
+    "name": "Shoe 9",
+    "price": 1500,
+    "category": "Men Performance",
+    "images": ["p9.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": [],
+      "shoeHeight": ["Low"],
+      "sport": []
+    }
+  },
+  {
+    "id": "shoe-10",
+    "name": "Shoe 10",
+    "price": 1400,
+    "category": "Men Performance",
+    "images": ["p10.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["White", "Black"],
+      "shoeHeight": ["Low"],
+      "sport": []
+    }
+  },
+  {
+    "id": "shoe-11",
+    "name": "Shoe 11",
+    "price": 1800,
+    "category": "Men Performance",
+    "images": ["p11.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["White"],
+      "shoeHeight": ["Low"],
+      "sport": ["Running"]
+    }
+  },
+  {
+    "id": "shoe-13",
+    "name": "Shoe 13",
+    "price": 1200,
+    "category": "Men Performance",
+    "images": ["p13.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["Black"],
+      "shoeHeight": ["Low"],
+      "sport": ["Casual"]
+    }
+  },
+  {
+    "id": "shoe-14",
+    "name": "Shoe 14",
+    "price": 1700,
+    "category": "Men Performance",
+    "images": ["p14.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["White","Black"],
+      "shoeHeight": ["Low"],
+      "sport": ["Sneakers"]
+    }
+  },
+  {
+    "id": "shoe-15",
+    "name": "Shoe 15",
+    "price": 2000,
+    "category": "Men Performance",
+    "images": ["p15.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 11 / W 12.5", "US M 12 / W 13.5", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["₱2,000–₱5,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": ["white"],
+      "shoeHeight": ["Low"],
+      "sport": ["Sneakers"]
+    }
+  },
+  {
+    "id": "shoe-16",
+    "name": "Shoe 16",
+    "price": 1500,
+    "category": "Men Performance",
+    "images": ["p2.png"],
+    "sizes": ["US M 6 / W 7.5", "US M 6.5 / W 8", "US M 7 / W 8.5", "US M 7.5 / W 9", "US M 8 / W 9.5", "US M 8.5 / W 10", "US M 9 / W 10.5", "US M 9.5 / W 11", "US M 10 / W 11.5", "US M 10.5 / W 12", "US M 11 / W 12.5", "US M 11.5 / W 13", "US M 12 / W 13.5", "US M 12.5 / W 14", "US M 13 / W 14.5"],
+    "tags": {
+      "gender": ["Men"],
+      "price": ["Under ₱2,000"],
+      "saleOffers": ["New arrivals"],
+      "size": ["6", "7", "8", "9", "10", "11", "12"],
+      "colour": [],
+      "shoeHeight": ["Low"],
+      "sport": ["Basketball"]
+    }
+  }
+]

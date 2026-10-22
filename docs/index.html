@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/button_styling.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/product_lineup.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="icon" type="image/png" href="store_assets/logo_2.png">
+    <title>UniSole</title>
+</head>
+
+<body>
+    <div class="site-loader" id="site-loader" role="status" aria-label="Loading website">
+        <div class="loader-ladder" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="site-loader-label">Loading...</span>
+    </div>
+    <header>
+        <div class="leftSection">
+            <a class="logo" href="index.html" aria-label="UniSole home">
+                <img src="store_assets/logo_1.png" alt="UniSole">
+            </a>
+        </div>
+        <nav class="middleSection" aria-label="Main navigation">
+            <div class="tab"><a href="index.html" aria-current="page">Home</a></div>
+            <div class="tab"><a href="product_lineup_page.html">Shoes</a></div>
+            <div class="tab"><a href="help.html">Inquiries</a></div>
+        </nav>
+        <div class="rightSection">
+            <a class="favorites-link" href="favorites.html" aria-label="Favorites">
+                <img src="store_assets/favorite.svg" alt="" aria-hidden="true">
+            </a>
+            <a class="checkout-link" href="checkout.html" aria-label="Checkout">
+                <img class="checkout-icon" src="store_assets/checkout.png" alt="" aria-hidden="true">
+            </a>
+            <details class="site-mobile-menu">
+                <summary aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </summary>
+                <nav class="site-mobile-menu-links" aria-label="Mobile navigation">
+                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="product_lineup_page.html">Shoes</a>
+                    <a href="help.html">Inquiries</a>
+                    <a href="favorites.html">Favorites</a>
+                    <a href="checkout.html">Checkout</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main>
+        <section class="ad-carousel" aria-label="Featured adverts" aria-roledescription="carousel">
+            <div class="ad-carousel-slides">
+                <article class="ad-carousel-slide is-active" aria-roledescription="slide" aria-label="1 of 2">
+                    <img src="store_assets/advert.jpg" alt="A collection of sneakers displayed in a shoe store">
+                    <div class="ad-carousel-caption">
+                        <p class="ad-carousel-eyebrow">Find your next favourite</p>
+                        <h1>Make every step your own.</h1>
+                        <a class="button" href="product_lineup_page.html">Explore shoes</a>
+                    </div>
+                </article>
+                <article class="ad-carousel-slide" aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true">
+                    <img src="store_assets/advert_1.jpg" alt="A brown sneaker against a warm golden background">
+                    <div class="ad-carousel-caption">
+                        <p class="ad-carousel-eyebrow">Fresh looks, everyday comfort</p>
+                        <h2>Find a pair that moves with you.</h2>
+                        <a class="button" href="product_lineup_page.html">Shop the collection</a>
+                    </div>
+                </article>
+            </div>
+            <button class="ad-carousel-control ad-carousel-previous" type="button" aria-label="Previous advert">
+                <span aria-hidden="true">&#8249;</span>
+            </button>
+            <button class="ad-carousel-control ad-carousel-next" type="button" aria-label="Next advert">
+                <span aria-hidden="true">&#8250;</span>
+            </button>
+            <button class="ad-carousel-autoplay-toggle" type="button" aria-label="Pause autoplay" aria-pressed="true">
+                <span class="ad-carousel-autoplay-icon" aria-hidden="true"></span>
+            </button>
+            <div class="ad-carousel-indicators" aria-label="Choose an advert">
+                <button class="is-active" type="button" aria-label="Show advert 1" aria-current="true"></button>
+                <button type="button" aria-label="Show advert 2"></button>
+            </div>
+        </section>
+        <section class="featured-products" aria-labelledby="featured-products-heading">
+            <div class="featured-products-heading">
+                <div>
+                    <p class="featured-products-eyebrow">The UniSole collection</p>
+                    <h2 id="featured-products-heading">Featured shoes</h2>
+                </div>
+                <a class="featured-products-link" href="product_lineup_page.html">View all shoes <span
+                        aria-hidden="true">→</span></a>
+            </div>
+            <section class="shoe-grid" id="featured-products-grid" aria-label="Featured shoes"></section>
+        </section>
+    </main>
+    <template id="shoe-card-template">
+        <article class="product-card">
+            <div class="product-image-wrap">
+                <a class="product-image-link" href="product_preview.html" aria-label="View shoe details">
+                    <img class="product-image" alt="" loading="lazy">
+                </a>
+                <button class="favorite-button" type="button" aria-label="Add to favorites" aria-pressed="false">
+                    <img class="favorite-icon" src="store_assets/favorite.svg" alt="" aria-hidden="true">
+                </button>
+            </div>
+            <div class="product-details">
+                <p class="product-price"></p>
+                <h2 class="product-name"><a class="product-name-link" href="product_preview.html"></a></h2>
+                <p class="product-category"></p>
+            </div>
+            <div class="product-preview-selector" aria-label="Shoe image previews"></div>
+        </article>
+    </template>
+    <footer class="site-footer">
+        <p>&copy; UniSole.</p>
+        <div class="site-footer-policies" aria-label="Policies">
+            <span>Terms of Sale</span>
+            <span>Terms of Use</span>
+            <span>Privacy Policy</span>
+        </div>
+    </footer>
+    <script type="py" src="py_script/home.py"></script>
+    <script type="py" src="py_script/loading.py"></script>
+    <script type="py" src="py_script/product_information.py"></script>
+    <script type="py" src="py_script/favorites.py"></script>
+    <script type="py" src="py_script/scrolling.py"></script>
+</body>
+
+</html>
