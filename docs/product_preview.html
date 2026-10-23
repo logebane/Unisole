@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/button_styling.css">
+    <link rel="stylesheet" href="css/product_preview.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="icon" type="image/png" href="store_assets/logo_2.png">
+    <title>Shoe details | UniSole</title>
+</head>
+
+<body data-loader-mode="shoe-data">
+    <div class="site-loader" id="site-loader" role="status" aria-label="Loading website">
+        <div class="loader-ladder" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="site-loader-label">Loading...</span>
+    </div>
+    <header>
+        <div class="leftSection">
+            <a class="logo" href="index.html" aria-label="UniSole home">
+                <img src="store_assets/logo_1.png" alt="UniSole">
+            </a>
+        </div>
+        <nav class="middleSection" aria-label="Main navigation">
+            <div class="tab"><a href="index.html">Home</a></div>
+            <div class="tab"><a href="product_lineup_page.html" aria-current="page">Shoes</a></div>
+            <div class="tab"><a href="help.html">Inquiries</a></div>
+        </nav>
+        <div class="rightSection">
+            <a class="favorites-link" href="favorites.html" aria-label="Favorites">
+                <img src="store_assets/favorite.svg" alt="" aria-hidden="true">
+            </a>
+            <a class="checkout-link" href="checkout.html" aria-label="Checkout">
+                <img class="checkout-icon" src="store_assets/checkout.png" alt="" aria-hidden="true">
+            </a>
+            <details class="site-mobile-menu">
+                <summary aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </summary>
+                <nav class="site-mobile-menu-links" aria-label="Mobile navigation">
+                    <a href="index.html">Home</a>
+                    <a href="product_lineup_page.html">Shoes</a>
+                    <a href="help.html">Inquiries</a>
+                    <a href="favorites.html">Favorites</a>
+                    <a href="checkout.html">Checkout</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main class="product-detail-page">
+        <p id="data-status" role="status" hidden></p>
+        <div id="product-not-found" class="product-not-found" hidden>
+            <h1>Shoe not found</h1>
+            <p>That shoe may have been removed from the collection.</p>
+            <a href="product_lineup_page.html">Back to shoes</a>
+        </div>
+        <section id="product-detail" class="product-detail" aria-labelledby="detail-name" hidden>
+            <div class="product-gallery">
+                <div id="product-thumbnails" class="product-thumbnails" aria-label="Product images"></div>
+                <div class="product-gallery-main">
+                    <img id="gallery-main-image" alt="">
+                </div>
+            </div>
+            <div class="product-purchase">
+                <a class="product-back-button tab" href="product_lineup_page.html" aria-label="Back to shoes">
+                    <span aria-hidden="true">←</span>
+                    <span>Back</span>
+                </a>
+                <h1 id="detail-name"></h1>
+                <p id="detail-category" class="detail-category"></p>
+                <p id="detail-price" class="detail-price"></p>
+
+                <div class="size-heading">
+                    <h2>Select Size</h2>
+                    </details>
+                </div>
+
+                <div id="size-options" class="size-options" aria-label="Available sizes"></div>
+                <p class="size-availability-note">Sample size options only; live inventory is not connected.</p>
+                <p id="product-action-status" class="product-action-status" role="status"></p>
+                <button id="add-to-bag" class="add-to-bag btn-gradient" type="button">Add to Bag</button>
+                <button id="detail-favorite" class="detail-favorite btn-fill" type="button" aria-pressed="false">
+                    Favourite ♡
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="bag-added-dialog" id="bag-added-dialog" aria-labelledby="bag-added-heading"
+        aria-describedby="bag-added-message">
+        <h2 id="bag-added-heading">Added to bag</h2>
+        <p id="bag-added-message"></p>
+        <div class="bag-added-dialog-actions">
+            <button id="close-bag-added-dialog" type="button">Continue shopping</button>
+            <a href="checkout.html">View bag</a>
+        </div>
+    </dialog>
+
+    <footer class="site-footer">
+        <p>&copy; UniSole.</p>
+        <div class="site-footer-policies" aria-label="Policies">
+            <span>Terms of Sale</span>
+            <span>Terms of Use</span>
+            <span>Privacy Policy</span>
+        </div>
+    </footer>
+
+    <script type="py" src="py_script/loading.py"></script>
+    <script type="py" src="py_script/product_information.py"></script>
+    <script type="py" src="py_script/favorites.py"></script>
+    <script type="py" src="py_script/product_interaction.py"></script>
+    <script type="py" src="py_script/scrolling.py"></script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/button_styling.css">
+    <link rel="stylesheet" href="css/product_lineup.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="icon" type="image/png" href="store_assets/logo_2.png">
+    <title>Unisole</title>
+</head>
+
+<body id="page-top" data-loader-mode="shoe-data">
+    <div class="site-loader" id="site-loader" role="status" aria-label="Loading website">
+        <div class="loader-ladder" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="site-loader-label">Loading...</span>
+    </div>
+    <header>
+        <div class="leftSection">
+            <a class="logo" href="index.html" aria-label="UniSole home">
+                <img src="store_assets/logo_1.png" alt="UniSole">
+            </a>
+        </div>
+        <nav class="middleSection" aria-label="Main navigation">
+            <div class="tab"><a href="index.html">Home</a></div>
+            <div class="tab"><a href="product_lineup_page.html" aria-current="page">Shoes</a></div>
+            <div class="tab"><a href="help.html">Inquiries</a></div>
+        </nav>
+        <div class="rightSection">
+            <a class="favorites-link" href="favorites.html" aria-label="Favorites">
+                <img src="store_assets/favorite.svg" alt="" aria-hidden="true">
+            </a>
+            <a class="checkout-link" href="checkout.html" aria-label="Checkout">
+                <img class="checkout-icon" src="store_assets/checkout.png" alt="" aria-hidden="true">
+            </a>
+            <details class="site-mobile-menu">
+                <summary aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </summary>
+                <nav class="site-mobile-menu-links" aria-label="Mobile navigation">
+                    <a href="index.html">Home</a>
+                    <a href="product_lineup_page.html" aria-current="page">Shoes</a>
+                    <a href="help.html">Inquiries</a>
+                    <a href="favorites.html">Favorites</a>
+                    <a href="checkout.html">Checkout</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <div class="product-intro">
+            <p class="eyebrow">UNISOLE COLLECTION</p>
+            <h1>Shoes</h1>
+        </div>
+        <p id="data-status" role="status" hidden></p>
+        <div class="catalog-layout">
+            <aside class="filter-sidebar" aria-label="Product filters">
+                <details class="filter-section" open>
+                    <summary>Gender <span class="filter-count"></span></summary>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter-group="gender" data-filter-value="Men" checked>
+                            Men</label>
+                        <label><input type="checkbox" data-filter-group="gender" data-filter-value="Women">
+                            Women</label>
+                        <label><input type="checkbox" data-filter-group="gender" data-filter-value="Unisex">
+                            Unisex</label>
+                    </div>
+                </details>
+
+                <details class="filter-section">
+                    <summary>Shop By Price</summary>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter-group="price" data-filter-value="Under ₱2,000"> Under
+                            ₱2,000</label>
+                        <label><input type="checkbox" data-filter-group="price" data-filter-value="₱2,000–₱5,000">
+                            ₱2,000–₱5,000</label>
+                        <label><input type="checkbox" data-filter-group="price" data-filter-value="₱5,000–₱10,000">
+                            ₱5,000–₱10,000</label>
+                        <label><input type="checkbox" data-filter-group="price" data-filter-value="Over ₱10,000"> Over
+                            ₱10,000</label>
+                    </div>
+                </details>
+
+                <details class="filter-section">
+                    <summary>Sale &amp; Offers</summary>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter-group="saleOffers" data-filter-value="On sale"> On
+                            sale</label>
+                        <label><input type="checkbox" data-filter-group="saleOffers" data-filter-value="New arrivals">
+                            New arrivals</label>
+                    </div>
+                </details>
+
+                <details class="filter-section">
+                    <summary>Size</summary>
+                    <div class="filter-options filter-options-inline">
+                        <label><input type="checkbox" data-filter-group="size" data-filter-value="6"> 6</label>
+                        <label><input type="checkbox" data-filter-group="size" data-filter-value="7"> 7</label>
+                        <label><input type="checkbox" data-filter-group="size" data-filter-value="8"> 8</label>
+                        <label><input type="checkbox" data-filter-group="size" data-filter-value="9"> 9</label>
+                        <label><input type="checkbox" data-filter-group="size" data-filter-value="10"> 10</label>
+                        <label><input type="checkbox" data-filter-group="size" data-filter-value="11"> 11</label>
+                        <label><input type="checkbox" data-filter-group="size" data-filter-value="12"> 12</label>
+                    </div>
+                </details>
+
+                <details class="filter-section">
+                    <summary>Colour</summary>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter-group="colour" data-filter-value="Black">
+                            Black</label>
+                        <label><input type="checkbox" data-filter-group="colour" data-filter-value="White">
+                            White</label>
+                        <label><input type="checkbox" data-filter-group="colour" data-filter-value="Blue"> Blue</label>
+                        <label><input type="checkbox" data-filter-group="colour" data-filter-value="Red"> Red</label>
+                    </div>
+                </details>
+
+                <details class="filter-section">
+                    <summary>Shoe Height</summary>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter-group="shoeHeight" data-filter-value="Low">
+                            Low</label>
+                        <label><input type="checkbox" data-filter-group="shoeHeight" data-filter-value="Mid">
+                            Mid</label>
+                        <label><input type="checkbox" data-filter-group="shoeHeight" data-filter-value="High">
+                            High</label>
+                    </div>
+                </details>
+
+                <details class="filter-section">
+                    <summary>Sport</summary>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter-group="sport" data-filter-value="Running">
+                            Running</label>
+                        <label><input type="checkbox" data-filter-group="sport" data-filter-value="Basketball">
+                            Basketball</label>
+                        <label><input type="checkbox" data-filter-group="sport" data-filter-value="Soccer">
+                            Soccer</label>
+                        <label><input type="checkbox" data-filter-group="sport" data-filter-value="Tennis">
+                            Tennis</label>
+                    </div>
+                </details>
+                <details class="filter-section">
+                    <summary>Type</summary>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter-group="sport" data-filter-value="Casual">
+                            Casual</label>
+                        <label><input type="checkbox" data-filter-group="sport" data-filter-value="Sneakers">
+                            Sneakers</label>
+                    </div>
+                </details>
+            </aside>
+
+            <section class="catalog-results" aria-label="Shoe results">
+                <div class="catalog-toolbar">
+                    <p id="filter-status" role="status" aria-live="polite"></p>
+                    <label for="shoe-sort">Sort by</label>
+                    <select id="shoe-sort">
+                        <option value="featured">Featured</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                    </select>
+                </div>
+                <section class="shoe-grid" id="shoe-grid" aria-label="Shoe collection"></section>
+            </section>
+        </div>
+    </main>
+
+    <template id="shoe-card-template">
+        <article class="product-card">
+            <div class="product-image-wrap">
+                <a class="product-image-link" href="product_preview.html" aria-label="View shoe details">
+                    <img class="product-image" alt="" loading="lazy">
+                </a>
+                <button class="favorite-button" type="button" aria-label="Add to favorites" aria-pressed="false">
+                    <img class="favorite-icon" src="store_assets/favorite.svg" alt="" aria-hidden="true">
+                </button>
+            </div>
+            <div class="product-details">
+                <p class="product-price"></p>
+                <h2 class="product-name"><a class="product-name-link" href="product_preview.html"></a></h2>
+                <p class="product-category"></p>
+            </div>
+            <div class="product-preview-selector" aria-label="Shoe image previews"></div>
+        </article>
+    </template>
+
+    <a class="back-to-top" href="#page-top" aria-label="Scroll to the top of the page">
+        <span aria-hidden="true">↑</span>
+        <span class="back-to-top-label">Top</span>
+    </a>
+
+    <footer class="site-footer">
+        <p>&copy; UniSole.</p>
+        <div class="site-footer-policies" aria-label="Policies">
+            <span>Terms of Sale</span>
+            <span>Terms of Use</span>
+            <span>Privacy Policy</span>
+        </div>
+    </footer>
+
+    <script type="py" src="py_script/loading.py"></script>
+    <script type="py" src="py_script/product_information.py"></script>
+    <script type="py" src="py_script/filtering.py"></script>
+    <script type="py" src="py_script/favorites.py"></script>
+    <script type="py" src="py_script/product_interaction.py"></script>
+    <script type="py" src="py_script/scrolling.py"></script>
+</body>
+
+</html>
