@@ -12,6 +12,21 @@ def retain_callback(callback):
     return proxy
 
 
+def sync_video_playback(video):
+    slide = video.closest(".ad-carousel-slide")
+    is_visible = video.getAttribute("data-carousel-visible") == "true"
+    should_play = (
+        slide is not None
+        and slide.classList.contains("is-active")
+        and is_visible
+        and not document.hidden
+    )
+    if should_play:
+        video.play()
+    else:
+        video.pause()
+
+
 def show_slide(slides, indicators, index):
     if not slides:
         return
@@ -21,11 +36,58 @@ def show_slide(slides, indicators, index):
         is_active = slide_index == active_index
         slide.classList.toggle("is-active", is_active)
         slide.setAttribute("aria-hidden", str(not is_active).lower())
+        video = slide.querySelector("video")
+        if video is not None:
+            sync_video_playback(video)
         indicators[slide_index].classList.toggle("is-active", is_active)
         if is_active:
             indicators[slide_index].setAttribute("aria-current", "true")
         else:
             indicators[slide_index].removeAttribute("aria-current")
+
+
+def setup_video():
+    carousel = document.querySelector(".ad-carousel")
+    video = document.querySelector(".ad-carousel-slide video")
+    watch_button = document.querySelector(".watch-campaign")
+    if carousel is None or video is None or watch_button is None:
+        return
+
+    video.volume = 0.4
+    video.muted = False
+
+    def watch_campaign(event):
+        event.preventDefault()
+        video.controls = True
+        video.muted = False
+        if hasattr(video, "requestFullscreen"):
+            video.requestFullscreen()
+        elif hasattr(video, "webkitEnterFullscreen"):
+            video.webkitEnterFullscreen()
+        video.play()
+
+    def pause_when_not_visible(entries, _observer):
+        video.setAttribute(
+            "data-carousel-visible", str(entries[0].isIntersecting).lower()
+        )
+        sync_video_playback(video)
+
+    def pause_when_page_hidden(_event):
+        sync_video_playback(video)
+
+    watch_button.addEventListener("click", retain_callback(watch_campaign))
+    document.addEventListener(
+        "visibilitychange", retain_callback(pause_when_page_hidden)
+    )
+
+    if hasattr(window, "IntersectionObserver"):
+        observer_callback = retain_callback(pause_when_not_visible)
+        observer = window.IntersectionObserver.new(observer_callback)
+        observer.observe(carousel)
+        callbacks.append(observer)
+    else:
+        video.setAttribute("data-carousel-visible", "true")
+        sync_video_playback(video)
 
 
 def setup_carousel():
@@ -113,4 +175,5 @@ def setup_carousel():
     start_autoplay()
 
 
+setup_video()
 setup_carousel()

@@ -32,13 +32,16 @@
 
 .ad-carousel-slide::after {
   position: absolute;
+  z-index: 1;
   inset: 0;
   background: linear-gradient(90deg, rgb(0 0 0 / 62%), rgb(0 0 0 / 8%) 75%);
   content: "";
 }
 
-.ad-carousel-slide img {
+.ad-carousel-slide img,
+.ad-carousel-slide video {
   position: absolute;
+  z-index: 0;
   inset: 0;
   width: 100%;
   height: 100%;
@@ -47,7 +50,7 @@
 
 .ad-carousel-caption {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 620px;
   padding: 48px clamp(24px, 8vw, 100px);
   color: #fff;
@@ -71,9 +74,12 @@
 .ad-carousel-caption .button {
   display: inline-block;
   padding: 12px 20px;
+  border: 0;
   border-radius: 4px;
   background: #f7f4ec;
   color: #171512;
+  cursor: pointer;
+  font-family: inherit;
   font-weight: 700;
   text-decoration: none;
 }
