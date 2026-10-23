@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/button_styling.css">
+    <link rel="stylesheet" href="css/help.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="icon" type="image/png" href="store_assets/logo_2.png">
+    <title>Inquiries | UniSole</title>
+</head>
+
+<body id="page-top">
+    <div class="site-loader" id="site-loader" role="status" aria-label="Loading website">
+        <div class="loader-ladder" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="site-loader-label">Loading...</span>
+    </div>
+
+    <header>
+        <div class="leftSection">
+            <a class="logo" href="index.html" aria-label="UniSole home">
+                <img src="store_assets/logo_1.png" alt="UniSole">
+            </a>
+        </div>
+        <nav class="middleSection" aria-label="Main navigation">
+            <div class="tab"><a href="index.html">Home</a></div>
+            <div class="tab"><a href="product_lineup_page.html">Shoes</a></div>
+            <div class="tab"><a href="help.html" aria-current="page">Inquiries</a></div>
+        </nav>
+        <div class="rightSection">
+            <a class="favorites-link" href="favorites.html" aria-label="Favorites">
+                <img src="store_assets/favorite.svg" alt="" aria-hidden="true">
+            </a>
+            <a class="checkout-link" href="checkout.html" aria-label="Checkout">
+                <img class="checkout-icon" src="store_assets/checkout.png" alt="" aria-hidden="true">
+            </a>
+            <details class="site-mobile-menu">
+                <summary aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </summary>
+                <nav class="site-mobile-menu-links" aria-label="Mobile navigation">
+                    <a href="index.html">Home</a>
+                    <a href="product_lineup_page.html">Shoes</a>
+                    <a href="help.html" aria-current="page">Inquiries</a>
+                    <a href="favorites.html">Favorites</a>
+                    <a href="checkout.html">Checkout</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main class="help-page">
+        <section class="help-intro" aria-labelledby="help-heading">
+            <p class="help-eyebrow">HERE TO HELP</p>
+            <h1 id="help-heading">How can we help?</h1>
+            <p>Find quick answers to common questions about browsing and shopping at UniSole.</p>
+        </section>
+
+        <nav class="help-shortcuts" aria-label="Quick links">
+            <a href="product_lineup_page.html">
+                <span><strong>Browse shoes</strong><small>Explore the collection</small></span>
+                <span class="help-shortcut-arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="favorites.html">
+                <span><strong>Favorites</strong><small>See your saved shoes</small></span>
+                <span class="help-shortcut-arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="checkout.html">
+                <span><strong>Your bag</strong><small>Review items and totals</small></span>
+                <span class="help-shortcut-arrow" aria-hidden="true">→</span>
+            </a>
+        </nav>
+
+        <section class="help-faq" aria-labelledby="faq-heading">
+            <div class="help-section-heading">
+                <p class="help-eyebrow">QUICK ANSWERS</p>
+                <h2 id="faq-heading">Frequently asked questions</h2>
+            </div>
+            <details>
+                <summary>How do I find a pair of shoes?</summary>
+                <p>Open <a href="product_lineup_page.html">Shoes</a> to browse the collection. Use the available filters
+                    to narrow down the options.</p>
+            </details>
+            <details>
+                <summary>How do I save shoes for later?</summary>
+                <p>Select the heart on a shoe to add it to your favorites. Visit <a href="favorites.html">Favorites</a>
+                    to see your saved items.</p>
+            </details>
+            <details>
+                <summary>Where can I review my bag?</summary>
+                <p>Open <a href="checkout.html">Your bag</a> to review the items you've added and see the displayed
+                    subtotal, delivery estimate, and total.</p>
+            </details>
+            <details>
+                <summary>Can I change the quantity of an item?</summary>
+                <p>On the Favorites page, use the plus and minus controls beside an item to choose a quantity before
+                    adding it to your bag.</p>
+            </details>
+        </section>
+
+        <aside class="help-note">
+            <h2>Still looking for something?</h2>
+            <p>Need help finding a pair? <a href="product_lineup_page.html">Browse our shoes</a>.</p>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; UniSole.</p>
+        <div class="site-footer-policies" aria-label="Policies">
+            <span>Terms of Sale</span>
+            <span>Terms of Use</span>
+            <span>Privacy Policy</span>
+        </div>
+    </footer>
+
+    <script type="py" src="py_script/loading.py"></script>
+    <script type="py" src="py_script/scrolling.py"></script>
+</body>
+
+</html>
