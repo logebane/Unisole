@@ -12,20 +12,9 @@ def retain_callback(callback):
     return proxy
 
 
-def safe_play_video(video):
-    try:
+def play_video(video):
+    if video.paused:
         video.play()
-        return
-    except Exception as exc:
-        error_name = exc.__class__.__name__
-        if error_name != "NotAllowedError":
-            raise
-
-    try:
-        video.muted = True
-        video.play()
-    except Exception:
-        pass
 
 
 def sync_video_playback(video):
@@ -37,9 +26,9 @@ def sync_video_playback(video):
         and is_visible
         and not document.hidden
     )
-    if should_play:
-        safe_play_video(video)
-    else:
+    if should_play and video.paused:
+        play_video(video)
+    elif not should_play and not video.paused:
         video.pause()
 
 
@@ -69,13 +58,12 @@ def setup_video():
     if carousel is None or video is None or watch_button is None:
         return
 
-    video.volume = 0.4
     video.muted = True
+    video.volume = 0.4
+    video.setAttribute("data-carousel-visible", "false")
 
     def unmute_video():
         video.muted = False
-        if hasattr(video, "volume"):
-            video.volume = 0.4
 
     def watch_campaign(event):
         event.preventDefault()
@@ -85,10 +73,7 @@ def setup_video():
             video.requestFullscreen()
         elif hasattr(video, "webkitEnterFullscreen"):
             video.webkitEnterFullscreen()
-        safe_play_video(video)
-
-    safe_play_video(video)
-    window.setTimeout(retain_callback(lambda *_: unmute_video()), 1500)
+        play_video(video)
 
     def pause_when_not_visible(entries, _observer):
         video.setAttribute(
