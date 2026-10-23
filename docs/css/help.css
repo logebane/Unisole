@@ -1,0 +1,194 @@
+.help-page {
+  width: min(100% - 48px, 960px);
+  margin: 0 auto;
+  padding: 64px 0 88px;
+  color: #20201e;
+}
+
+.help-intro {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.help-eyebrow {
+  margin-bottom: 10px;
+  color: #777364;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.help-intro h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.help-intro > p:last-child {
+  color: #66645e;
+  line-height: 1.7;
+}
+
+.help-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 64px;
+}
+
+.help-shortcuts > a {
+  display: flex;
+  min-height: 98px;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid #e3e0d8;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.help-shortcuts > a:hover {
+  transform: translateY(-2px);
+  border-color: #9b9583;
+}
+
+.help-shortcuts > a:focus-visible,
+.help-faq a:focus-visible,
+.help-note a:focus-visible {
+  outline: 2px solid #625b49;
+  outline-offset: 4px;
+}
+
+.help-shortcut-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  place-items: center;
+  border-radius: 50%;
+  background: #f2efe6;
+  color: #625b49;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.help-shortcuts strong,
+.help-shortcuts small {
+  display: block;
+}
+
+.help-shortcuts strong {
+  margin-bottom: 4px;
+}
+
+.help-shortcuts small {
+  color: #77746b;
+  font-size: 0.8rem;
+}
+
+.help-shortcut-arrow {
+  margin-left: auto;
+  color: #77746b;
+  font-size: 1.25rem;
+}
+
+.help-section-heading {
+  margin-bottom: 16px;
+}
+
+.help-section-heading h2,
+.help-note h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+}
+
+.help-faq details {
+  border-top: 1px solid #e3e0d8;
+}
+
+.help-faq details:last-child {
+  border-bottom: 1px solid #e3e0d8;
+}
+
+.help-faq summary {
+  position: relative;
+  padding: 20px 36px 20px 0;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+
+.help-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.help-faq summary::after {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  content: "+";
+  color: #77746b;
+  font-size: 1.4rem;
+  transform: translateY(-50%);
+}
+
+.help-faq details[open] summary::after {
+  content: "−";
+}
+
+.help-faq details p {
+  max-width: 720px;
+  padding: 0 32px 20px 0;
+  color: #66645e;
+  line-height: 1.7;
+}
+
+.help-faq a,
+.help-note a {
+  color: #514b3d;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.help-note {
+  margin-top: 48px;
+  padding: 24px;
+  border-radius: 8px;
+  background: #f7f4ec;
+}
+
+.help-note h2 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.help-note p {
+  color: #66645e;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .help-page {
+    width: min(100% - 32px, 600px);
+    padding: 44px 0 64px;
+  }
+
+  .help-shortcuts {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+
+  .help-shortcuts > a {
+    min-height: 78px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .help-shortcuts > a {
+    transition: none;
+  }
+}

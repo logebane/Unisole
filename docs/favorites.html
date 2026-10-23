@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/button_styling.css">
+    <link rel="stylesheet" href="css/product_favorites.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="icon" type="image/png" href="store_assets/logo_2.png">
+    <title>Wishlist | Unisole</title>
+</head>
+
+<body id="page-top" data-loader-mode="shoe-data">
+    <div class="site-loader" id="site-loader" role="status" aria-label="Loading website">
+        <div class="loader-ladder" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="site-loader-label">Loading...</span>
+    </div>
+    <header>
+        <div class="leftSection">
+            <a class="logo" href="index.html" aria-label="UniSole home">
+                <img src="store_assets/logo_1.png" alt="UniSole">
+            </a>
+        </div>
+        <nav class="middleSection" aria-label="Main navigation">
+            <div class="tab"><a href="index.html">Home</a></div>
+            <div class="tab"><a href="product_lineup_page.html">Shoes</a></div>
+            <div class="tab"><a href="help.html">Inquiries</a></div>
+        </nav>
+        <div class="rightSection">
+            <a class="favorites-link" href="favorites.html" aria-current="page" aria-label="Favorites">
+                <img src="store_assets/favorite.svg" alt="" aria-hidden="true">
+            </a>
+            <a class="checkout-link" href="checkout.html" aria-label="Checkout">
+                <img class="checkout-icon" src="store_assets/checkout.png" alt="" aria-hidden="true">
+            </a>
+            <details class="site-mobile-menu">
+                <summary aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </summary>
+                <nav class="site-mobile-menu-links" aria-label="Mobile navigation">
+                    <a href="index.html">Home</a>
+                    <a href="product_lineup_page.html">Shoes</a>
+                    <a href="help.html">Inquiries</a>
+                    <a href="favorites.html" aria-current="page">Favorites</a>
+                    <a href="checkout.html">Checkout</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main class="favorites-page">
+        <div class="favorites-heading">
+            <p class="favorites-eyebrow">YOUR COLLECTION</p>
+            <h1>Wishlist</h1>
+        </div>
+        <p id="data-status" role="status" hidden></p>
+        <section id="wishlist-grid" class="shoe-grid" aria-label="Wishlist items"></section>
+        <p id="wishlist-empty" class="wishlist-empty" hidden>Your wishlist is empty. Shop and add items your wishlist!
+        </p>
+        <p id="wishlist-status" class="wishlist-status wishlist-toast" role="status" aria-live="polite" hidden></p>
+    </main>
+
+    <template id="shoe-card-template">
+        <article class="product-card">
+            <div class="product-image-wrap">
+                <a class="product-image-link" href="product_preview.html" aria-label="View shoe details">
+                    <img class="product-image" alt="" loading="lazy">
+                </a>
+                <button class="favorite-button" type="button" aria-label="Remove from favorites" aria-pressed="true">
+                    <img class="favorite-icon" src="store_assets/favorite_2.svg" alt="" aria-hidden="true">
+                </button>
+            </div>
+            <div class="product-details">
+                <p class="product-price"></p>
+                <h2 class="product-name"><a class="product-name-link" href="product_preview.html"></a></h2>
+                <p class="product-category"></p>
+            </div>
+            <div class="wishlist-actions">
+                <div class="wishlist-quantity" role="group" aria-label="Wishlist quantity">
+                    <button class="quantity-button" type="button" data-quantity-change="-1"
+                        aria-label="Decrease quantity">−</button>
+                    <span class="quantity-value" aria-live="polite">1</span>
+                    <button class="quantity-button" type="button" data-quantity-change="1"
+                        aria-label="Increase quantity">+</button>
+                </div>
+                <button class="wishlist-add-to-cart" type="button">Add to bag</button>
+            </div>
+        </article>
+    </template>
+
+    <footer class="site-footer">
+        <p>&copy; UniSole.</p>
+        <div class="site-footer-policies" aria-label="Policies">
+            <span>Terms of Sale</span>
+            <span>Terms of Use</span>
+            <span>Privacy Policy</span>
+        </div>
+    </footer>
+
+    <script type="py" src="py_script/loading.py"></script>
+    <script type="py" src="py_script/product_information.py"></script>
+    <script type="py" src="py_script/favorites.py"></script>
+    <script type="py" src="py_script/product_interaction.py"></script>
+    <script type="py" src="py_script/scrolling.py"></script>
+</body>
+
+</html>
